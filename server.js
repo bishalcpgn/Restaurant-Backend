@@ -7,6 +7,7 @@ import { testRoutes } from "./routes/testRoutes.js";
 import { connectDB } from "./config/db.js"
 import { userDataRoutes } from "./routes/userRoutes.js";
 import { authMiddleware } from "./middlewares/authMiddleware.js";
+import { resturantRoutes } from "./routes/resturantRoutes.js";
 
 //dot env configuration
 dotenv.config()
@@ -28,6 +29,8 @@ app.use("/api/v1/test", testRoutes)
 app.use("/api/v1/auth", authRoutes)
 
 app.use("/api/v1/userData", userDataRoutes )
+
+app.use("/api/v1/resturant", resturantRoutes)
 
 
 app.get("/", async (req, res, next) => {

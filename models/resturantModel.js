@@ -4,7 +4,7 @@ import mongoose from "mongoose"
 
 // Schema
 
-const resturantSchema = mongoose.Schema({
+const restaurantSchema = mongoose.Schema({
 
     title: {
         type: String,
@@ -53,7 +53,7 @@ const resturantSchema = mongoose.Schema({
     },
 
     code: {
-        type: string
+        type: String
     },
 
     // map coordinares, google map api is paid 
@@ -73,6 +73,9 @@ const resturantSchema = mongoose.Schema({
 )
 
 
+const restaurantModel = mongoose.model("Restaurant", restaurantSchema);
+
+export default restaurantModel
 
 
 
